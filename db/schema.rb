@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221173238) do
+ActiveRecord::Schema.define(version: 20170221173538) do
+
+  create_table "routes", force: :cascade do |t|
+    t.integer  "trail_id"
+    t.integer  "transit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trail_id"], name: "index_routes_on_trail_id"
+    t.index ["transit_id"], name: "index_routes_on_transit_id"
+  end
 
   create_table "trails", force: :cascade do |t|
     t.string   "name"

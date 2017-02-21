@@ -30,13 +30,13 @@
           <div class="col-md-12">
             <ul class="nav nav-pills">
               <li class="nav-item">
-                <%= link_to 'Routes', routes_path %>
+                <%= link_to 'Trails', trails_path, class: "nav-link #{'active' if controller_name == 'trails'}" %>
               </li>
               <li class="nav-item">
-                <%= link_to 'Trails', trails_path %>
+                <%= link_to 'Transits', transits_path, class: "nav-link #{'active' if controller_name == 'transits'}" %>
               </li>
               <li class="nav-item">
-                <%= link_to 'Transits', transits_path %>
+                <%= link_to 'Routes', routes_path, class: "nav-link #{'active' if controller_name == 'routes'}" %>
               </li>
             </ul>
           </div>

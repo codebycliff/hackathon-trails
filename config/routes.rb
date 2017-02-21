@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :paths
-  root to: 'routes#index'
+  root to: 'trails#index'
   resources :routes
   resources :transits
   resources :trails

@@ -16,10 +16,9 @@
               <li class="list-group-item">
                 <h5 class="mb-1">Recomended Trails</h5>
               </li>
-              <li class="list-group-item">Heritage Trail&nbsp; <i class="fa fa-angle-right"></i></li>
-              <li class="list-group-item">Dapibus ac facilisis&nbsp; <i class="fa fa-angle-right"></i></li>
-              <li class="list-group-item">Morbi leo risus&nbsp; <i class="fa fa-angle-right"></i></li>
-              <li class="list-group-item">Porta ac consectetur&nbsp; <i class="fa fa-angle-right"></i></li>
+              <% @trails.each do |trail| %>
+                <li class="list-group-item"><%= link_to trail.name, trail_path(trail) %> <i class="fa fa-angle-right"></i></li>
+              <% end %>
             </ul>
           </div>
         </div>
@@ -47,32 +46,5 @@
 
 
   </div>
-
-
-  <h4>All Trails</h4>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Material</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @trails.each do |trail| %>
-        <tr>
-          <td><%= trail.name %></td>
-          <td><%= trail.material %></td>
-          <td><%= link_to 'Show', trail %></td>
-          <td><%= link_to 'Edit', edit_trail_path(trail) %></td>
-          <td><%= link_to 'Destroy', trail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
 
 <%= link_to 'New Trail', new_trail_path %>

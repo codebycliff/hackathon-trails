@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @transit.name %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @transit.speed %>
+</p>
+
+<%= link_to 'Edit', edit_transit_path(@transit) %> |
+<%= link_to 'Back', transits_path %>

@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221172246) do
+ActiveRecord::Schema.define(version: 20170221173238) do
 
   create_table "trails", force: :cascade do |t|
     t.string   "name"
     t.string   "material"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transits", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "speed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

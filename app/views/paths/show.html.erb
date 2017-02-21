@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @path.duration %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @path.direction %>
+</p>
+
+<p>
+  <strong>Trail:</strong>
+  <%= @path.trail %>
+</p>
+
+<%= link_to 'Edit', edit_path_path(@path) %> |
+<%= link_to 'Back', paths_path %>

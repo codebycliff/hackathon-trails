@@ -1,29 +1,78 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Trails</h1>
+  <div class="bg-faded py-0 text-center">
+    <div class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img class="img-fluid m-a-0 p-0" src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDW8nO9JhT_pEjebobq9pgUF2cEp0EUb1I&amp;center=folsom+Ave+san+francisco&amp;zoom=16&amp;size=640x300&amp;sensor=false&amp;scale=2">
+          </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Material</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-group">
 
-  <tbody>
-    <% @trails.each do |trail| %>
+              <li class="list-group-item">
+                <h5 class="mb-1">Recomended Trails</h5>
+              </li>
+              <li class="list-group-item">Heritage Trail&nbsp; <i class="fa fa-angle-right"></i></li>
+              <li class="list-group-item">Dapibus ac facilisis&nbsp; <i class="fa fa-angle-right"></i></li>
+              <li class="list-group-item">Morbi leo risus&nbsp; <i class="fa fa-angle-right"></i></li>
+              <li class="list-group-item">Porta ac consectetur&nbsp; <i class="fa fa-angle-right"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Share</h4>
+              <h6 class="card-subtitle text-muted">Share with your friends</h6>
+              <a href="#" class="card-link"><i class="fa fa-facebook"></i> Facebook</a>
+              <a href="#" class="card-link"><i class="fa fa-twitter"></i> Twitter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+
+
+
+
+  </div>
+
+
+  <h4>All Trails</h4>
+
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= trail.name %></td>
-        <td><%= trail.material %></td>
-        <td><%= link_to 'Show', trail %></td>
-        <td><%= link_to 'Edit', edit_trail_path(trail) %></td>
-        <td><%= link_to 'Destroy', trail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Material</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @trails.each do |trail| %>
+        <tr>
+          <td><%= trail.name %></td>
+          <td><%= trail.material %></td>
+          <td><%= link_to 'Show', trail %></td>
+          <td><%= link_to 'Edit', edit_trail_path(trail) %></td>
+          <td><%= link_to 'Destroy', trail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
 
 <%= link_to 'New Trail', new_trail_path %>

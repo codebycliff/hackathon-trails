@@ -1,0 +1,16 @@
+Started GET "/" for ::1 at 2017-02-21 11:17:19 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/cliff/.rvm/gems/ruby-2.3.3@hackathon-trails/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/cliff/.rvm/gems/ruby-2.3.3@hackathon-trails/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 21ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 11:17:28 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/cliff/.rvm/gems/ruby-2.3.3@hackathon-trails/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/cliff/.rvm/gems/ruby-2.3.3@hackathon-trails/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+

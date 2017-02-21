@@ -1,6 +1,6 @@
 <h2>Paths</h2>
 <ul>
   <% @trail.paths.each do |path| %>
-    <li><%= path.duration %> seconds in direction: <%= path.direction %> (<%= link_to 'Edit', edit_path_path(path) %>)</li>
+    <li><%= path.duration %> seconds in direction: <%= path.direction %> (<%= link_to 'Edit', edit_trail_path_path(@trail, path) %>)</li>
   <% end %>
 </ul>

@@ -19,7 +19,7 @@
         <td><%= path.direction %></td>
         <td><%= path.trail.name %></td>
         <td><%= link_to 'Show', path %></td>
-        <td><%= link_to 'Edit', edit_path_path(path) %></td>
+        <td><%= link_to 'Edit', edit_trail_path_path(@trail, path) %></td>
         <td><%= link_to 'Destroy', path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

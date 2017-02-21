@@ -3,7 +3,7 @@
 <%= render 'form', trail: @trail %>
 
 <%= render 'paths' %>
-<%= link_to 'Add Path', new_path_path %>
+<%= link_to 'Add Path', new_trail_path_path(@trail) %>
 
 <%= link_to 'Show', @trail %> |
-<%= link_to 'Back', trails_path %>
+<%= link_to 'Back', edit_trail_path(@trail) %>

@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :trail_id %>
-    <%= f.text_field :trail_id %>
+    <%= f.label :trail %>
+    <%= f.select :trail_id, Trail.all.collect { |trail| [trail.name, trail.id]}, include_blank: '-- Select --' %>
   </div>
 
   <div class="field">
-    <%= f.label :transit_id %>
-    <%= f.text_field :transit_id %>
+    <%= f.label :transit %>
+    <%= f.select :transit_id, Transit.all.collect { |transit| [transit.name, transit.id] }, include_blank: '-- Select --' %>
   </div>
 
   <div class="actions">

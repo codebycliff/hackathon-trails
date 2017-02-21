@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'routes#index'
   resources :routes
   resources :transits
   resources :trails

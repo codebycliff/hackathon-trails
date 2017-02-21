@@ -1,0 +1,32 @@
+<%= form_for(path) do |f| %>
+  <% if path.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(path.errors.count, "error") %> prohibited this path from being saved:</h2>
+
+      <ul>
+      <% path.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :duration %>
+    <%= f.number_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= f.label :direction %>
+    <%= f.number_field :direction %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trail_id %>
+    <%= f.select :trail_id, Trail.all.collect { |trail| [trail.name, trail.id] }, include_blank: '-- Select -- ' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

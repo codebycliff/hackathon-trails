@@ -1,6 +1,6 @@
 <%= form_for(trail) do |f| %>
   <% if trail.errors.any? %>
-    <div id="error_explanation">
+    <div id="alert alert-warning">
       <h2><%= pluralize(trail.errors.count, "error") %> prohibited this trail from being saved:</h2>
 
       <ul>
@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :material %>
-    <%= f.text_field :material %>
+    <%= f.text_field :material, :class 'form-control' %>
   </div>
 
-  <div class="actions">
+  <div class="form-group">
     <%= f.submit %>
   </div>
 <% end %>
